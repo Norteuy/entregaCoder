@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Entrega03</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Liquidación de sueldos</h1>
+        </nav>
+    </header>
+    <section>
+        <div>
+            <form action="" id="formulario">
+                <div>
+                    <label for="numeroObrero">Número Obrero</label>
+                    <input type="number" name="numeroObrero" id="numeroObrero">
+                    <label for="nombreObrero">Obrero</label>
+                    <p id="nombreObrero"></p>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Incremento</legend>
+                        <input type="checkbox" name="trababa" id="trabada">
+                        <label for="trabada">Caña Trabada</label><br>
+                        <input type="checkbox" name="quemada" id="quemada">
+                        <label for="quemada">Caña mal quemada</label><br>
+                        <input type="checkbox" name="lineaMayor" id="lineaMayor">
+                        <label for="lineaMayor">Sacada mayor 50 m</label><br>
+                    </fieldset>
+                </div>
+                <div>
+                    <label for="toneladas">Toneladas cortadas</label>
+                    <input type="number" name="toneladas" id="toneladas">
+                </div>
+                <div>
+                    <button id="btnCalcular">Calcular</button>
+                </div>
+            </form>
+        </div>
+        <div id="resultado">
+            <table>
+                <thead>
+                  <tr>
+                    <td>id</td>       
+                    <td>Nombre</td>
+                    <td>Salario</td>
+                    <td></td>             
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                
+                </tbody>
+              </table>
+        </div>
+    </section>
+    <footer>
+        <h3>&copy; Angelo De Souza</h3>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
