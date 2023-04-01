@@ -10,7 +10,7 @@
  
  body {
      background-color: #15142b;
-     background-image: linear-gradient(180deg, #372991, #15142b);
+     background-image: linear-gradient(to top, rgba(245,246,252,0.52), rgba(19,111,117,073));
      background-repeat: no-repeat;
      background-position: center center;
      background-size: cover;
@@ -150,7 +150,7 @@
      border-radius: 5px;
  }
  
- input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
+ input[type=text], [type=number], select, input[type=email], input[type=password], input[type=tel] {
      width: 100%;
      padding: 12px 20px;
      font-size: 1em;
@@ -227,3 +227,29 @@
      background-color: rgba(0, 0, 0, 0);
  }
  
+/* estilo div clima*/
+
+#clima{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 20px;
+    background-color: #3494e6;
+    width: 200px;
+    height: 200px;
+   text-align: center;
+}
+#clima p{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 6px;
+    color: azure;
+}
+#ubicacion{
+    font-weight: bold;
+}
+
+#clima img{
+    width: 80px;
+}
