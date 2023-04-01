@@ -204,6 +204,19 @@
      border-radius: 4px;
      cursor: pointer;
  }
+
+ .btn{
+    background-color:inherit;
+    color: red;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 50%;
+ }
+
+ .btn:hover{
+    background-color: red;
+    color:white;
+ }
  
  input[type=button]:hover, button:hover {
      background-color: #291f6c;

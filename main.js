@@ -109,7 +109,7 @@ function mostrarSalarios() {
     fila.innerHTML = `<td>${sueldo.id}</td>
                         <td><p>${sueldo.nombre}</p></td>
                         <td>${sueldo.salario}</td>
-                        <td><button class="btn btn-danger borrar_elemento">Borrar</button></td>
+                        <td><button class="btn borrar_elemento">&#x1F5D1 </button></td>
                         `;
     tabla.append(fila);
   }
