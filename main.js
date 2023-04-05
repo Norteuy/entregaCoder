@@ -32,12 +32,20 @@ const canaMalQuemada$ = 24.24;
 const frutasVerduras$ = 1414.26;
 
 const listaObreros = [];
-const listaSalarios = [];
+let listaSalarios = [];
 
-//declaracion  objetos obreros
+//declaracion  obreros
 listaObreros.push(new Cortadores(1, "Jose"));
 listaObreros.push(new Cortadores(2, "Marcos"));
 listaObreros.push(new Cortadores(3, "Luis"));
+listaObreros.push(new Cortadores(4, "Pedro"));
+listaObreros.push(new Cortadores(5, "Diego"));
+listaObreros.push(new Cortadores(6, "Andres"));
+listaObreros.push(new Cortadores(7, "Jorge"));
+listaObreros.push(new Cortadores(8, "Santiago"));
+listaObreros.push(new Cortadores(9, "Juan"));
+listaObreros.push(new Cortadores(10, "Aron"));
+
 
 //captura elementos del DOM
 const form = document.getElementById("formulario");
@@ -88,7 +96,7 @@ function calculoCorte() {
   let sueldo = {
     id: numObrero.value,
     nombre: nomCortador.innerText,
-    salario: sueldoBase,
+    salario: sueldoBase.toFixed(2),
   };
 
   listaSalarios.push(sueldo);
@@ -106,13 +114,32 @@ function mostrarSalarios() {
   for (let sueldo of listaSalarios) {
     let fila = document.createElement("tr");
 
-    fila.innerHTML = `<td>${sueldo.id}</td>
-                        <td><p>${sueldo.nombre}</p></td>
+    fila.innerHTML = `<td id="id">${sueldo.id}</td>
+                        <td>${sueldo.nombre}</td>
                         <td>${sueldo.salario}</td>
                         <td><button class="btn borrar_elemento">&#x1F5D1 </button></td>
                         `;
     tabla.append(fila);
   }
+
+  let btnBorrar=document.querySelectorAll(".borrar_elemento")
+  for(let boton of btnBorrar){
+    boton.addEventListener("click",borrarSalario)
+  }
+
+}
+
+/*elimina de la lista de salarios */
+function borrarSalario(){
+
+let elementoBorrar=document.getElementById("id").textContent;
+
+/* funcion retorna true si no es el elemento a borrar*/
+let eliminarSalario=(sueldo)=> sueldo.id!=elementoBorrar
+
+let listaFiltrada=listaSalarios.filter(eliminarSalario)
+listaSalarios=listaFiltrada
+mostrarSalarios()
 
 }
 
